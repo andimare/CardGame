@@ -12,13 +12,13 @@ void specialCard(int posCard, string value){
 	if(posCard < 5){
 		cout<<"Ace "<<value<<endl;
 	}
-	else if(posCard < 49 && posCard > 44){
+	else if(posCard < 45 && posCard > 40){
 		cout<<"Jack "<<value<<endl;
 	}
-	else if(posCard < 53 && posCard > 48){
+	else if(posCard < 49 && posCard > 44){
 		cout<<"Queen "<<value<<endl;
 	}
-	else if(posCard < 53 && posCard >52){
+	else if(posCard < 53 && posCard > 48){
 		cout<<"King "<<value<<endl;
 	}
 }
@@ -94,7 +94,7 @@ int generateRandom(){
 	return 1+ (n % 54);
 }
 
-void game(){
+void game1(){
 	gameLobby:
 	cout<<"Select enter color."<<endl;
 	cout<<"1. Red"<<endl;
@@ -126,6 +126,75 @@ void game(){
 	}
 }
 
+
+void game2(){
+	gameLobby:
+	cout<<"Select enter color."<<endl;
+	cout<<"1. Flowers"<<endl;
+	cout<<"2. Hearts"<<endl;
+	cout<<"3. Diamonds"<<endl;
+	cout<<"4. Spades"<<endl;
+	cout<<"5. EXIT"<<endl;
+	
+	int option;
+	cin>>option;
+	int n;
+	
+	switch(option){
+		case 2:
+			n = generateRandom();
+			queryCard(n);
+			if((n % 4) == 0)cout<<"Correct"<<endl;
+			else cout<<"Incorrect"<<endl;
+			goto gameLobby;
+		case 1:
+			n = generateRandom();
+			queryCard(n);
+			if((n % 4) == 1)cout<<"Correct"<<endl;
+			else cout<<"Incorrect"<<endl;
+			goto gameLobby;
+		case 3:
+			n = generateRandom();
+			queryCard(n);
+			if((n % 4) == 2)cout<<"Correct"<<endl;
+			else cout<<"Incorrect"<<endl;
+			goto gameLobby;
+		case 4:
+			n = generateRandom();
+			queryCard(n);
+			if((n % 4) == 3)cout<<"Correct"<<endl;
+			else cout<<"Incorrect";
+			goto gameLobby;
+		case 5:
+			break;
+		default:
+			cout<<"Exceeded the options"<<endl;
+			goto gameLobby;
+	}
+}
+
+void game(){
+	level:
+	cout<<"Select level."<<endl;
+	cout<<"1. Easy"<<endl;
+	cout<<"2. medium"<<endl;
+	cout<<"3. EXIT"<<endl;
+	
+	int option;
+	cin>>option;
+	
+	switch(option){
+		case 1:
+			game1();
+			goto level;
+		case 2:
+			game2();
+			goto level;
+		case 3:
+			break;
+	}
+}
+
 int main(){
 	int card;
 	int num;
@@ -154,7 +223,4 @@ int main(){
 			cout<<"exceeded the limit."<<endl;
 			goto mainLobby;
 	}
-	
-	
-	
 }
