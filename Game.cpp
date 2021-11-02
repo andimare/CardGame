@@ -126,10 +126,9 @@ void game1(){
 	}
 }
 
-
 void game2(){
 	gameLobby:
-	cout<<"Select enter color."<<endl;
+	cout<<"Select enter shape."<<endl;
 	cout<<"1. Flowers"<<endl;
 	cout<<"2. Hearts"<<endl;
 	cout<<"3. Diamonds"<<endl;
@@ -173,12 +172,45 @@ void game2(){
 	}
 }
 
+bool checkingPosition(int choice, int card){
+	if((card / 4) == choice)return true;
+	else return false;
+}
+
+void game3(){
+	gameLobby:
+	cout<<"Select enter corresponding number."<<endl;
+	cout<<"From 1 - 13 (1 - ace, 11 - jack, 12 - queen, 13 - king)"<<endl;
+	cout<<"0. EXIT"<<endl;
+	
+	int option;
+	cin>>option;
+	int n;
+	
+	switch(option){
+		case 0:
+			break;
+		default:
+			if(option > 0 && option <14){	
+				n = generateRandom();
+				queryCard(n);
+				if(checkingPosition(option, n))cout<<"Correct"<<endl;
+				else cout<<"Incorrect"<<endl;
+				goto gameLobby;
+			}else{
+				cout<<"Exceeded the options"<<endl;
+				goto gameLobby;	
+			}
+	}
+}
+
 void game(){
 	level:
 	cout<<"Select level."<<endl;
 	cout<<"1. Easy"<<endl;
-	cout<<"2. medium"<<endl;
-	cout<<"3. EXIT"<<endl;
+	cout<<"2. Medium"<<endl;
+	cout<<"3. Hard"<<endl;
+	cout<<"4. EXIT"<<endl;
 	
 	int option;
 	cin>>option;
@@ -191,7 +223,12 @@ void game(){
 			game2();
 			goto level;
 		case 3:
+			game3();
+			goto level;
+		case 4:
 			break;
+		default:
+			goto level;
 	}
 }
 
