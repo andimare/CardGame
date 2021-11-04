@@ -42,7 +42,7 @@ void queryCard(int pos){
 				if((i % 4) == 0){
 					string str2 = " Hearts";
 					int pos = posNumber(i);
-					if(i > 44 || i < 5){
+					if(i > 40 || i < 5){
 						specialCard(i, str + str2);
 					}else{
 						cout<<pos<<" "<<str + str2<<endl;
@@ -50,7 +50,7 @@ void queryCard(int pos){
 				}else{
 					string str2 = " Diamonds";
 					int pos = posNumber(i);
-					if(i > 44 || i < 5){
+					if(i > 40 || i < 5){
 						specialCard(i, str + str2);
 					}else{
 						cout<<pos<<" "<<str + str2<<endl;
@@ -61,7 +61,7 @@ void queryCard(int pos){
 				if((i % 4) == 3){
 				 	string str2 = " Spades";
 					int pos = posNumber(i);
-					if(i > 44 || i < 5){
+					if(i > 40 || i < 5){
 						specialCard(i, str + str2);
 					}else{
 						cout<<pos<<" "<<str + str2<<endl;
@@ -69,7 +69,7 @@ void queryCard(int pos){
 				}else{
 					string str2 = " Flowers";
 					int pos = posNumber(i);
-					if(i > 44 || i < 5){
+					if(i > 40 || i < 5){
 						specialCard(i, str + str2);
 					}else{
 						cout<<pos<<" "<<str + str2<<endl;
