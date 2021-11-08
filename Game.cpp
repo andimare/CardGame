@@ -61,7 +61,7 @@ int main(){
 			case 3:
 				break;
 		default:
-			cout<<"exceeded the limit."<<endl;
+			cout<<"Option is out of limit."<<endl;
 			goto mainLobby;
 	}
 }

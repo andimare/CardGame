@@ -4,11 +4,6 @@ int posNumber(int n){
 	return 1 + ((n-1) / 4);
 }
 
-bool checkingPosition(int choice, int card){
-	if((card / 4) == choice)return true;
-	else return false;
-}
-
 void specialCard(int posCard, string value){
 	if(posCard < 5){
 		cout<<"Ace "<<value<<endl;
@@ -85,13 +80,5 @@ void printAllCards(){
 		cout<<i<<"   ";
 		queryCard(i);
 	}
-}
-
-int generateRandom(){
-	srand(time(0));
-	
-	int n = rand();
-	
-	return 1+ (n % 54);
 }
 
