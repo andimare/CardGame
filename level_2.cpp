@@ -35,7 +35,7 @@ void game2(){
 			n = generateRandom();
 			queryCard(n);
 			if((n % 4) == 3)cout<<"Correct"<<endl;
-			else cout<<"Incorrect";
+			else cout<<"Incorrect"<<endl;
 			goto gameLobby;
 		case 5:
 			break;

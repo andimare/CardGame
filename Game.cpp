@@ -2,6 +2,7 @@
 #include<string>
 #include<ctime>
 #include<cstdlib>
+#include "globalFunction.cpp"
 #include "cardQuery.cpp"
 #include "level_1.cpp"
 #include "level_2.cpp"

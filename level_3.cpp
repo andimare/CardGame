@@ -1,4 +1,10 @@
+
 using namespace std;
+
+bool checkingPosition(int choice, int card){
+	if(posNumber(card) == choice)return true;
+	else return false;
+}
 
 void game3(){
 	gameLobby:

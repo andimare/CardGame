@@ -1,15 +1,3 @@
-bool checkingPosition(int choice, int card){
-	if((card / 4) == choice)return true;
-	else return false;
-}
-
-int generateRandom(){
-	srand(time(0));
-	
-	int n = rand();
-	
-	return 1+ (n % 54);
-}
 
 void game1(){
 	gameLobby:
