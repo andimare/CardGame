@@ -14,20 +14,22 @@ void game3(){
 	
 	int option;
 	cin>>option;
+	cout<<endl;
 	int n;
 	
 	switch(option){
 		case 0:
+			cout<<endl;
 			break;
 		default:
 			if(option > 0 && option <14){	
 				n = generateRandom();
 				queryCard(n);
-				if(checkingPosition(option, n))cout<<"Correct"<<endl;
-				else cout<<"Incorrect"<<endl;
+				if(checkingPosition(option, n))cout<<"Correct"<<endl<<endl;
+				else cout<<"Incorrect"<<endl<<endl;
 				goto gameLobby;
 			}else{
-				cout<<"Exceeded the options"<<endl;
+				cout<<"Exceeded the options"<<endl<<endl;
 				goto gameLobby;	
 			}
 	}
