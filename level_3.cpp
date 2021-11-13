@@ -11,6 +11,7 @@ void game3(){
 	cout<<"Select enter corresponding number."<<endl;
 	cout<<"From 1 - 13 (1 - ace, 11 - jack, 12 - queen, 13 - king)"<<endl;
 	cout<<"0. EXIT"<<endl;
+	cout<<"Enter Option. (then press enter) :";
 	
 	int option;
 	cin>>option;
@@ -19,7 +20,6 @@ void game3(){
 	
 	switch(option){
 		case 0:
-			cout<<endl;
 			break;
 		default:
 			if(option > 0 && option <14){	

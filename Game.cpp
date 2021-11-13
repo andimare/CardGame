@@ -21,26 +21,21 @@ void game(){
 	cout<<"4. EXIT"<<endl;
 	cout<<"Enter Option. (then press enter) :";
 	cin>>option;
-	cout<<endl<<endl;
+	cout<<endl;
 	
 	switch(option){
 		case 1:
-			cout<<endl;
 			game1();
 			goto level;
 		case 2:
-			cout<<endl;
 			game2();
 			goto level;
 		case 3:
-			cout<<endl;
 			game3();
 			goto level;
 		case 4:
-			cout<<endl;
 			break;
 		default:
-			cout<<endl;
 			cout<<"Level Non-existant."<<endl<<endl;
 			goto level;
 	}
@@ -50,11 +45,9 @@ int main(){
 	int card;
 	int num;
 		
-	cout<<"Welcome to my Card Guess Game"<<endl;
+	cout<<"Welcome to my Card Guess Game"<<endl<<endl;
 	
 	mainLobby:
-		
-	cout<<endl;
 	cout<<"Select :"<<endl;
 	cout<<"1. Print out all the cards"<<endl;
 	cout<<"2. Start Game"<<endl;
@@ -66,6 +59,7 @@ int main(){
 	switch(card){
 		case 1:
 			printAllCards();
+			cout<<endl;
 			goto mainLobby;
 		case 2:
 			game();

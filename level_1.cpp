@@ -1,7 +1,7 @@
 
 void game1(){
 	gameLobby:
-	cout<<"Select enter color."<<endl;
+	cout<<"Select color.(then Enter)"<<endl;
 	cout<<"1. Red"<<endl;
 	cout<<"2. Black"<<endl;
 	cout<<"3. exit"<<endl;
@@ -26,7 +26,6 @@ void game1(){
 			else cout<<"Incorrect"<<endl<<endl;
 			goto gameLobby;
 		case 3:
-			cout<<endl;
 			break;
 		default:
 			cout<<"Exceeded the options"<<endl<<endl;

@@ -40,7 +40,6 @@ void game2(){
 			else cout<<"Incorrect"<<endl<<endl;
 			goto gameLobby;
 		case 5:
-			cout<<endl;
 			break;
 		default:
 			cout<<"Exceeded the options"<<endl<<endl;
