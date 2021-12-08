@@ -12,7 +12,7 @@
       "program": "c:\\Users\\ANDREW\\Documents\\cpp p\\Card Game\\build\\Debug\\outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
       "externalConsole": false,
       "setupCommands": [
         {
